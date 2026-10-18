@@ -1,0 +1,80 @@
+PROJECT NOVA - Git Mastery & Troubleshooting Activity
+CS223 Application Development and Emerging Technologies
+Repository: https://github.com/jhnpaulbnz02-creator/Project-Nova
+
+==================================================
+PART 1: CORE REPOSITORY MANAGEMENT
+==================================================
+
+1. Initialization
+   git init
+
+2. Staging
+   git add auth-service.js
+   (auth-service.js was created first with:
+    Set-Content -Path auth-service.js -Value "// Initial authentication service")
+
+3. Committing
+   git commit -m "Added initial auth service logic."
+
+4. Branching
+   git branch feature/payment-gateway
+
+5. Navigation
+   git checkout feature/payment-gateway
+
+6. Publishing
+   git push --set-upstream origin feature/payment-gateway
+
+7. Syncing
+   git pull origin main
+
+8. Conflict Check
+   git status
+
+9. Resolution
+   git commit -m "Resolved conflict in config.js"
+   (config.js was fixed and staged first with: git add config.js)
+
+
+==================================================
+PART 2: TROUBLESHOOTING & EMERGENCY FIXES
+==================================================
+
+1. The "Oops, wrong file" Problem
+   git restore --staged .env
+   (or git reset HEAD .env)
+
+2. The "Typo in the message" Problem
+   git commit --amend -m "Fixed authentication typo"
+
+3. The "Forgot a file" Problem
+   1. git add styles.css
+   2. git commit --amend --no-edit
+
+4. The "I hate these changes" Problem
+   git restore index.html
+   (or git checkout -- index.html)
+
+5. The "Wrong Branch" Problem
+   1. git branch new-feature
+   2. git reset --hard HEAD~3
+   3. git checkout new-feature
+
+6. The "Detached HEAD" Problem
+   git switch -c recovery-branch
+   (or git checkout -b recovery-branch)
+
+7. The "Undo a pushed mistake" Problem
+   git revert <buggy-commit-hash>
+
+8. The "Accidental Deletion" Problem
+   1. git reflog
+   2. git branch <deleted-branch-name> <commit-hash>
+
+9. The "Ghost Files" Problem
+   git add -u
+   (or git rm <filename>)
+
+10. The "Pushed to the void" Problem
+    git push origin --delete testing-junk
