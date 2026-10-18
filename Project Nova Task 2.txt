@@ -3,7 +3,6 @@ CS223 Application Development and Emerging Technologies
 Repository: https://github.com/jhnpaulbnz02-creator/Project-Nova
 
 PART 1:
-
 1. Initialization
    - git init
 
@@ -35,7 +34,6 @@ PART 1:
    - (config.js was fixed and staged first with: git add config.js)
 
 PART 2:
-
 1. The "Oops, wrong file" Problem
    - git restore --staged .env
    - (or git reset HEAD .env)
